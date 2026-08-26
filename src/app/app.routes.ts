@@ -46,4 +46,9 @@ export const routes: Routes = [
     title: `${baseTitle} - => Testimonies`
   },
 
+  {
+    path: '**',
+    redirectTo: 'home'
+  }
+
 ];
