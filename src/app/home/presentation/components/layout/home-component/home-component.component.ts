@@ -85,7 +85,7 @@ export class HomeComponentComponent {
     const filePath = cover?.filePath?.trim();
 
     if (!filePath) {
-      return 'assets/HomeArt.png';
+      return 'assets/HomeArt.webp';
     }
 
     if (filePath.startsWith('http://') || filePath.startsWith('https://')) {
