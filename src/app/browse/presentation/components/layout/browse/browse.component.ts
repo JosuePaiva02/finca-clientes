@@ -235,12 +235,19 @@ export class BrowseComponent implements OnInit {
     this.departmentPlaceholder = department;
     this.searchParams.department = department;
     this.isDepartmentDropdownOpen = false;
+
+    if (department !== Department.LIMA) {
+      this.districtPlaceholder = null;
+      this.searchParams.district = undefined;
+    }
   }
 
   selectDistrict(district: District): void {
     this.districtPlaceholder = district;
     this.searchParams.district = district;
     this.isDistrictDropdownOpen = false;
+    this.departmentPlaceholder = Department.LIMA;
+    this.searchParams.department = Department.LIMA;
   }
 
   @HostListener('document:click', ['$event'])
@@ -297,6 +304,8 @@ export class BrowseComponent implements OnInit {
 
     return origin;
   }
+
+
 
 
   toggleTag(tag: any): void {
