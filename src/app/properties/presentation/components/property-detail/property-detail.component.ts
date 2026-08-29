@@ -68,7 +68,7 @@ export class PropertyDetailComponent implements OnInit {
 
 
   get currentImageUrl(): string {
-    return this.imageUrls[this.currentIndex] ?? '/assets/HomeArt.png';
+    return this.imageUrls[this.currentIndex] ?? '/assets/HomeArt.webp';
   }
 
   get sanitizedDescription(): SafeHtml {
@@ -128,7 +128,7 @@ export class PropertyDetailComponent implements OnInit {
     });
 
     if (images.length === 0) {
-      return ['/assets/HomeArt.png'];
+      return ['/assets/HomeArt.webp'];
     }
 
     return images.map((image) => this.resolveImageUrl(image.filePath));
@@ -138,7 +138,7 @@ export class PropertyDetailComponent implements OnInit {
     const trimmed = filePath?.trim();
 
     if (!trimmed) {
-      return '/assets/HomeArt.png';
+      return '/assets/HomeArt.webp';
     }
 
     if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) {

@@ -277,7 +277,7 @@ export class BrowseComponent implements OnInit {
     const filePath = cover?.filePath?.trim();
 
     if (!filePath) {
-      return 'assets/HomeArt.png';
+      return 'assets/HomeArt.webp';
     }
 
     if (
